@@ -66,30 +66,64 @@ technique, ​Forest wildlifeand hunting, ​Caring for forest to benefit nature
       </div></header>
     <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="1332" data-image-height="850" id="sec-f4d5">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-title u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-direction="">Want to become a witcher?</h1>
+        <h1 class="u-text u-text-default u-title u-text-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-direction="" id = "BcmWitcher">Want to become a witcher?</h1>
       </div>
     </section>
     <section class="u-align-center u-clearfix u-grey-5 u-section-2" id="carousel_029e">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h3 class="u-text u-text-default u-text-1">To become a monster slayer, all you need - push nutton below</h3>
-        <a href="https://store.steampowered.com/app/292030/_3/?l=russian" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-custom-color-1 u-palette-4-base u-radius-50 u-btn-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">Become a Witcher</a>
+        <h3 class="u-text u-text-default u-text-1">To become a monster slayer, all you need - push button below</h3>
+        <a href="https://store.steampowered.com/app/292030/_3/?l=russian" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-custom-color-1 u-palette-4-base u-radius-50 u-btn-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">Become a Witcher </a>
       </div>
     </section>
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-be3e"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Created by: Ilya Tverdohleb</p>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-design" target="_blank">
-        <span>Website Design Ideas</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="https://nicepage.com/static-site-generator" target="_blank">
-        <span>Static Website Generator</span>
-      </a>. 
-    </section>
+      </div>
+      <script>
+        var chr = -1;
+        var txt = 'We really need more witchers, contact us please'
+        var l = txt.length
+        var p = "_"
+        function changetext()
+        {
+        chr++;
+        t = document.all["text"].innerHTML
+        tt = t.substring(0,t.length-p.length)
+        if(txt.charAt(chr)!="<")
+        {
+        document.all["text"].innerHTML= tt + txt.charAt(chr) + p
+        }
+        else {
+        document.all["text"].innerHTML= tt + txt.substring(chr, chr+4) + p
+        chr=chr+3
+        }
+        setTimeout("changetext()", 90)
+        }
+        function str(num) {
+        var s = ""
+        for(i=0; i<num; i++)
+        { s = s + " " }
+        return s }
+      </script>            
+        <body onload="changetext()">
+        <font id="text"></font>
+    </p>
+
+  
+
+    <script>
+      $('#BcmWitcher').on('click', function(){
+          myAlert();
+
+      function myAlert(){
+          alert('aboba')
+          }
+      })
+  </script>
+    
+    
+    </footer>
+    
   </body>
 </html>

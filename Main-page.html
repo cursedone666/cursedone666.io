@@ -73,23 +73,48 @@ technique, ​Forest wildlifeand hunting, ​Caring for forest to benefit nature
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h3 class="u-text u-text-default u-text-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">Bestiary - learn how to protect youself from monsters</h3>
         <a href="Read-Bestiary.html" data-page-id="117323473" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-base u-radius-50 u-btn-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-direction="">read Bestiary</a>
+        
       </div>
     </section>
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-be3e"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Created by: Ilya Tverdohleb</p>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-mockup" target="_blank">
-        <span>Website Mockup</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
+      </div>
+      <p class="u-text u-text-2">
+        <script>
+          var chr = -1;
+          var txt = 'Witchers community'
+          var l = txt.length
+          var p = "_"
+          function changetext()
+          {
+          chr++;
+          t = document.all["text"].innerHTML
+          tt = t.substring(0,t.length-p.length)
+          if(txt.charAt(chr)!="<")
+          {
+          document.all["text"].innerHTML= tt + txt.charAt(chr) + p
+          }
+          else {
+          document.all["text"].innerHTML= tt + txt.substring(chr, chr+4) + p
+          chr=chr+3
+          }
+          setTimeout("changetext()", 90)
+          }
+          function str(num) {
+          var s = ""
+          for(i=0; i<num; i++)
+          { s = s + " " }
+          return s }
+        </script>            
+          <body onload="changetext()">
+          <font id="text"></font>
       </p>
-      <a class="u-link" href="https://nicepage.com/html-website-builder" target="_blank">
-        <span>HTML Builder</span>
-      </a>. 
-    </section>
+
+     
+    
+    </footer>
+    
   </body>
 </html>

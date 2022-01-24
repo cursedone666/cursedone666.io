@@ -88,17 +88,39 @@
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-be3e"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Created by: Ilya Tverdohleb</p>
-      </div></footer>
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
+      </div>
+      <script>
+        var chr = -1;
+        var txt = 'Become a witcher! Dont leave Geralt alone here!'
+        var l = txt.length
+        var p = "_"
+        function changetext()
+        {
+        chr++;
+        t = document.all["text"].innerHTML
+        tt = t.substring(0,t.length-p.length)
+        if(txt.charAt(chr)!="<")
+        {
+        document.all["text"].innerHTML= tt + txt.charAt(chr) + p
+        }
+        else {
+        document.all["text"].innerHTML= tt + txt.substring(chr, chr+4) + p
+        chr=chr+3
+        }
+        setTimeout("changetext()", 90)
+        }
+        function str(num) {
+        var s = ""
+        for(i=0; i<num; i++)
+        { s = s + " " }
+        return s }
+      </script>            
+        <body onload="changetext()">
+        <font id="text"></font>
+    </p>
+    
+    
+    </footer>
+    
   </body>
 </html>
